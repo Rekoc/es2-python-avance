@@ -38,7 +38,7 @@ def call_run(cmd):
 """
 subprocess.Popen
 """
-def call_Popen(cmd: List[str]):
+def call_Popen(cmd: list[str]):
     output, ret, rt_proc = None, None, None
     try:
         rt_proc = Popen(
@@ -60,7 +60,7 @@ def call_Popen(cmd: List[str]):
 
 def main():
     # Please update "lo0" to something else
-    cmd = ["ifconfig", "lo0"]
+    cmd = ["ifconfig", "wlo1"]
     output, returncode = call_run(cmd)
     print(output, returncode)
     output, process = call_Popen(cmd)
